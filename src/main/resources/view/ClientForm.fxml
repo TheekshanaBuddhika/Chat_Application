@@ -74,7 +74,7 @@
       </AnchorPane>
       <ScrollPane fx:id="ScrollPane" layoutX="24.0" layoutY="77.0" prefHeight="475.0" prefWidth="420.0">
          <content>
-            <VBox fx:id="msgVbox" onMouseClicked="#Mouse_On_Click_Hide_Emogi" prefHeight="474.0" prefWidth="418.0" style="-fx-border-radius: 30;" />
+            <VBox fx:id="msgVbox" onMouseClicked="#Mouse_On_Click_Hide_Emogi" prefWidth="398.0" style="-fx-border-radius: 30;" />
          </content>
       </ScrollPane>
       <TextField fx:id="txtMessage" layoutX="14.0" layoutY="584.0" onAction="#msgOnAction" onMouseClicked="#Mouse_On_Click_Hide_Emogi" prefHeight="26.0" prefWidth="306.0" promptText="Message" style="-fx-background-radius: 25;">
