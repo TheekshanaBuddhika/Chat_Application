@@ -1,48 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ClientPane" prefHeight="655.0" prefWidth="461.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController">
+<AnchorPane fx:id="ClientPane" prefHeight="655.0" prefWidth="461.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController">
    <children>
-      <AnchorPane layoutY="-2.0" prefHeight="62.0" prefWidth="461.0" style="-fx-background-color: #c2bba9;">
+      <Rectangle arcWidth="5.0" fill="#92ddffb2" height="106.0" layoutX="-15.0" layoutY="567.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="462.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />
+      <ImageView fitHeight="558.0" fitWidth="462.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="97.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+         <image>
+            <Image url="@../img/resul-mentes-DbwYNr8RPbg-unsplash%202.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutY="-2.0" prefHeight="72.0" prefWidth="463.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Label fx:id="lblName" layoutX="186.0" layoutY="21.0" text="SETHMINI">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <ImageView fitHeight="32.0" fitWidth="34.0" layoutX="369.0" layoutY="15.0" onMouseClicked="#btn_logout_On_action" pickOnBounds="true" preserveRatio="true">
+            <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="46.0" layoutY="13.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="443.0">
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX">
+                     <color>
+                        <Color red="0.42105263471603394" green="0.42105263471603394" blue="0.42105263471603394" opacity="0.41999998688697815" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Rectangle>
+            <ImageView fitHeight="20.0" fitWidth="23.0" layoutX="423.0" layoutY="12.0" onMouseClicked="#btn_logout_On_action" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="12.0">
                <image>
-                  <Image url="@../img/icons8-cancel-50.png" />
+                  <Image url="@../img/icons8-macos-close-90.png" />
                </image>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX">
+                     <color>
+                        <Color red="0.18421052396297455" opacity="0.28999999165534973" />
+                     </color>
+                  </DropShadow>
+               </effect>
             </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="55.0" layoutX="8.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/ffff.png" />
+               </image>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX">
+                     <color>
+                        <Color opacity="0.5099999904632568" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <Label fx:id="lblName" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" layoutX="79.0" layoutY="20.0" prefHeight="30.0">
+               <font>
+                  <Font name="Berlin Sans FB" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow blurType="ONE_PASS_BOX">
+                     <color>
+                        <Color opacity="0.30000001192092896" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
          </children>
       </AnchorPane>
-      <ScrollPane fx:id="ScrollPane" layoutX="21.0" layoutY="82.0" prefHeight="475.0" prefWidth="420.0">
+      <ScrollPane fx:id="ScrollPane" layoutX="24.0" layoutY="77.0" prefHeight="475.0" prefWidth="420.0">
          <content>
-            <VBox fx:id="msgVbox" onMouseClicked="#Mouse_On_Click_Hide_Emogi" prefHeight="474.0" prefWidth="418.0" />
+            <VBox fx:id="msgVbox" onMouseClicked="#Mouse_On_Click_Hide_Emogi" prefHeight="474.0" prefWidth="418.0" style="-fx-border-radius: 30;" />
          </content>
       </ScrollPane>
-      <TextField fx:id="txtMessage" layoutX="48.0" layoutY="586.0" onAction="#msgOnAction" onMouseClicked="#Mouse_On_Click_Hide_Emogi" prefHeight="26.0" prefWidth="306.0" promptText="Message" />
-      <ImageView fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="583.0" onMouseClicked="#btn_image_on_action" pickOnBounds="true" preserveRatio="true">
+      <TextField fx:id="txtMessage" layoutX="14.0" layoutY="584.0" onAction="#msgOnAction" onMouseClicked="#Mouse_On_Click_Hide_Emogi" prefHeight="26.0" prefWidth="306.0" promptText="Message" style="-fx-background-radius: 25;">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="1.0" green="1.0" blue="1.0" opacity="0.46000000834465027" />
+               </color>
+            </DropShadow>
+         </effect></TextField>
+      <ImageView fitHeight="37.0" fitWidth="47.0" layoutX="376.0" layoutY="583.0" onMouseClicked="#btn_image_on_action" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/icons8-image-24.png" />
+            <Image url="@../img/picture%20(1).png" />
          </image>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX">
+               <color>
+                  <Color opacity="0.3248175084590912" />
+               </color>
+            </DropShadow>
+         </effect>
       </ImageView>
-      <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="397.0" layoutY="584.0" onMouseClicked="#btn_massage_send_on_action" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="328.0" layoutY="587.0" onMouseClicked="#btn_massage_send_on_action" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/icons8-send-button-30.png" />
+            <Image url="@../img/send-message.png" />
          </image>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX">
+               <color>
+                  <Color red="0.43421053886413574" green="0.43421053886413574" blue="0.43421053886413574" opacity="0.3799999952316284" />
+               </color>
+            </DropShadow>
+         </effect>
       </ImageView>
-      <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="366.0" layoutY="584.0" onMouseClicked="#btn_imogi_on_action" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="32.0" fitWidth="31.0" layoutX="423.0" layoutY="585.0" onMouseClicked="#btn_imogi_on_action" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../img/icons8-smile-48.png" />
+            <Image url="@../img/happy-face%20(1).png" />
          </image>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX">
+               <color>
+                  <Color red="0.22368420660495758" green="0.21954190731048584" blue="0.21954190731048584" opacity="0.5" />
+               </color>
+            </DropShadow>
+         </effect>
       </ImageView>
-      <AnchorPane fx:id="EmojiPane" layoutX="166.0" layoutY="449.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #b6d6bf; -fx-background-radius: 20;">
+      <AnchorPane fx:id="EmojiPane" layoutX="250.0" layoutY="383.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #b6d6bf; -fx-background-radius: 20;">
          <children>
             <GridPane prefHeight="200.0" prefWidth="200.0">
               <columnConstraints>

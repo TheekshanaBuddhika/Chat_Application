@@ -24,7 +24,6 @@ public class LoginController {
         stage.setScene(new Scene(FXMLLoader.load(LoginController.class.getResource("/view/ClientForm.fxml"))));
         stage.setTitle("TalkLia");
         stage.getIcons().add(new Image("/img/preview 2.png"));
-       // stage.close();
         stage.centerOnScreen();
         stage.show();
     }
