@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -21,7 +22,9 @@ public class LoginController {
         txtname.clear();
         Stage stage = new Stage();
         stage.setScene(new Scene(FXMLLoader.load(LoginController.class.getResource("/view/ClientForm.fxml"))));
-        stage.close();
+        stage.setTitle("TalkLia");
+        stage.getIcons().add(new Image("/img/preview 2.png"));
+       // stage.close();
         stage.centerOnScreen();
         stage.show();
     }
